@@ -7,7 +7,9 @@ const NAV_LINKS = [
   { label: "Главная", href: "#hero" },
   { label: "О проекте", href: "#about" },
   { label: "Миссия", href: "#mission" },
+  { label: "Гипотеза", href: "#hypothesis" },
   { label: "Деятельность", href: "#activity" },
+  { label: "Этапы", href: "#stages" },
   { label: "Как помочь", href: "#donate" },
   { label: "Контакты", href: "#contacts" },
 ];
@@ -58,7 +60,9 @@ const Index = () => {
 
   const aboutSection = useInView();
   const missionSection = useInView();
+  const hypothesisSection = useInView();
   const activitySection = useInView();
+  const stagesSection = useInView();
   const donateSection = useInView();
   const contactsSection = useInView();
 
@@ -261,6 +265,100 @@ const Index = () => {
         </div>
       </section>
 
+      {/* HYPOTHESIS */}
+      <section id="hypothesis" ref={hypothesisSection.ref} className="py-28 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#AAFF00]/3 to-transparent" />
+        <div className="absolute right-0 top-1/3 w-[400px] h-[400px] bg-[#00D4FF]/6 rounded-full blur-[130px]" />
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className={`text-center mb-16 transition-all duration-700 ${hypothesisSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            <div className="text-[#AAFF00] text-xs font-medium uppercase tracking-[0.3em] mb-4">Научная основа</div>
+            <h2 className="font-oswald text-5xl md:text-6xl font-bold leading-tight">
+              ОСНОВНАЯ <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#AAFF00] to-[#00D4FF]">ГИПОТЕЗА</span>
+            </h2>
+          </div>
+
+          <div className={`transition-all duration-700 delay-100 ${hypothesisSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            {/* Central hypothesis block */}
+            <div className="relative border border-[#AAFF00]/20 rounded-3xl p-10 md:p-14 bg-white/[0.02] mb-10 overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#AAFF00]/50 to-transparent" />
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#AAFF00]/5 rounded-full blur-[60px]" />
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                <div className="w-16 h-16 rounded-2xl bg-[#AAFF00]/10 border border-[#AAFF00]/30 flex items-center justify-center shrink-0">
+                  <Icon name="Fingerprint" size={32} className="text-[#AAFF00]" />
+                </div>
+                <div>
+                  <h3 className="font-oswald text-2xl font-semibold text-[#AAFF00] mb-4">Дерматоглифика и реинкарнация</h3>
+                  <p className="text-white/70 text-base leading-relaxed mb-4">
+                    Дерматоглифические узоры (отпечатки пальцев и стоп) формируются в период эмбрионального развития и остаются неизменными на протяжении всей жизни. Они уникальны для каждого человека и несут в себе закодированную биологическую информацию.
+                  </p>
+                  <p className="text-white/70 text-base leading-relaxed">
+                    Наша гипотеза: если феномен реинкарнации существует как биологически обусловленный процесс, то дерматоглифические паттерны могут сохранять статистически значимые следы преемственности индивидуальности — обнаруживаемые через сравнительный анализ больших данных.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Supporting pillars */}
+            <div className="grid md:grid-cols-2 gap-6 mb-10">
+              {[
+                {
+                  icon: "Dna",
+                  color: "#00D4FF",
+                  title: "Генетический аспект",
+                  desc: "Анализ связи дерматоглифических паттернов с генетическими маркерами. Выявление наследственных и ненаследственных компонентов узоров для отделения биологической преемственности от случайных совпадений.",
+                },
+                {
+                  icon: "Brain",
+                  color: "#FF2EAD",
+                  title: "Нейробиологический аспект",
+                  desc: "Исследование возможных нейробиологических механизмов формирования дерматоглифических паттернов и их корреляции с психологическими характеристиками личности.",
+                },
+                {
+                  icon: "ChartScatter",
+                  color: "#AAFF00",
+                  title: "Статистический анализ",
+                  desc: "Применение методов машинного обучения для поиска скрытых закономерностей в массиве из 10 000+ биометрических профилей. Контроль случайности через многократное тестирование гипотез.",
+                },
+                {
+                  icon: "Scale",
+                  color: "#FF6B2E",
+                  title: "Этические границы",
+                  desc: "Проект строго придерживается принципа научного нейтралитета. Мы не продвигаем религиозные или эзотерические концепции — лишь проверяем статистические закономерности эмпирическим путём.",
+                },
+              ].map(item => (
+                <div key={item.title} className="flex gap-5 p-6 rounded-2xl border border-white/[0.08] bg-white/[0.02] hover:border-white/15 transition-colors">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: `${item.color}15`, border: `1px solid ${item.color}30` }}>
+                    <Icon name={item.icon} size={22} style={{ color: item.color }} />
+                  </div>
+                  <div>
+                    <h4 className="font-oswald text-lg font-semibold mb-2" style={{ color: item.color }}>{item.title}</h4>
+                    <p className="text-white/50 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Expected outcomes */}
+            <div className="border border-white/[0.08] rounded-2xl p-7 bg-white/[0.02]">
+              <div className="font-oswald text-lg font-semibold mb-5 text-white/80">Ожидаемые научные результаты</div>
+              <div className="grid md:grid-cols-3 gap-4">
+                {[
+                  { num: "10 000+", label: "записей в базе данных дерматоглифики стоп и кистей — крупнейшей в мире" },
+                  { num: "15+", label: "публикаций в рецензируемых журналах с открытым доступом к данным" },
+                  { num: "1", label: "новое научное направление на стыке дерматоглифики, генетики и психологии" },
+                ].map(item => (
+                  <div key={item.num} className="flex gap-4 items-start">
+                    <div className="font-oswald text-3xl font-bold text-[#AAFF00] shrink-0">{item.num}</div>
+                    <div className="text-white/45 text-sm leading-relaxed pt-1">{item.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ACTIVITY */}
       <section id="activity" ref={activitySection.ref} className="py-28 px-6">
         <div className="max-w-7xl mx-auto">
@@ -286,6 +384,135 @@ const Index = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STAGES */}
+      <section id="stages" ref={stagesSection.ref} className="py-28 px-6 relative overflow-hidden">
+        <div className="absolute left-0 top-1/4 w-[350px] h-[350px] bg-[#FF2EAD]/6 rounded-full blur-[120px]" />
+
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className={`text-center mb-16 transition-all duration-700 ${stagesSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            <div className="text-[#FF2EAD] text-xs font-medium uppercase tracking-[0.3em] mb-4">Дорожная карта</div>
+            <h2 className="font-oswald text-5xl md:text-6xl font-bold">
+              ЭТАПЫ <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF2EAD] to-[#FF6B2E]">ПРОЕКТА</span>
+            </h2>
+            <p className="text-white/40 text-base mt-4">10-летняя программа исследований</p>
+          </div>
+
+          <div className={`relative transition-all duration-700 delay-100 ${stagesSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            {/* Vertical line */}
+            <div className="absolute left-[28px] md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#FF2EAD]/60 via-[#FF6B2E]/40 to-transparent md:-translate-x-px" />
+
+            <div className="flex flex-col gap-8">
+              {[
+                {
+                  period: "0–6 мес.",
+                  title: "Подготовительный этап",
+                  items: ["Формирование научного комитета", "Разработка технического задания", "Получение разрешений этических комитетов", "Создание прототипа ПО и закупка оборудования"],
+                  color: "#FF2EAD",
+                  index: 1,
+                },
+                {
+                  period: "6–12 мес.",
+                  title: "Пилотный этап",
+                  items: ["Набор пилотной группы 500–1 000 участников", "Апробация методики сбора данных", "Тестирование базы данных и ПО", "Первичный статистический анализ"],
+                  color: "#FF6B2E",
+                  index: 2,
+                },
+                {
+                  period: "12–36 мес.",
+                  title: "Масштабирование",
+                  items: ["Расширение выборки до 5 000 человек", "Внедрение автоматизированных инструментов анализа", "Публикация первых результатов"],
+                  color: "#AAFF00",
+                  index: 3,
+                },
+                {
+                  period: "36–72 мес.",
+                  title: "Основной сбор данных",
+                  items: ["Доведение выборки до 10 000+ участников", "Систематический анализ новых данных", "Валидация выявленных закономерностей"],
+                  color: "#00D4FF",
+                  index: 4,
+                },
+                {
+                  period: "72–108 мес.",
+                  title: "Обобщение результатов",
+                  items: ["Финальный статистический анализ", "Формулировка научных выводов", "Подготовка монографии и итоговых отчётов"],
+                  color: "#FF2EAD",
+                  index: 5,
+                },
+                {
+                  period: "108–120 мес.",
+                  title: "Постпроектный этап",
+                  items: ["Открытая база данных (с анонимизацией)", "Методические рекомендации", "Планирование последующих исследований"],
+                  color: "#AAFF00",
+                  index: 6,
+                },
+              ].map((stage, i) => (
+                <div key={stage.index}
+                  className={`relative flex gap-6 md:gap-0 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-start transition-all duration-700 ${stagesSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                  style={{ transitionDelay: `${i * 0.12}s` }}>
+
+                  {/* Dot */}
+                  <div className="relative z-10 flex flex-col items-center shrink-0 md:absolute md:left-1/2 md:-translate-x-1/2 md:top-4">
+                    <div className="w-14 h-14 rounded-full border-2 flex items-center justify-center font-oswald font-bold text-lg"
+                      style={{ borderColor: stage.color, backgroundColor: `${stage.color}15`, color: stage.color }}>
+                      {stage.index}
+                    </div>
+                  </div>
+
+                  {/* Card — alternates left/right on desktop */}
+                  <div className={`flex-1 md:w-[calc(50%-48px)] md:flex-none ${i % 2 === 0 ? "md:pr-16" : "md:pl-16 md:ml-auto"}`}>
+                    <div className="border border-white/[0.08] rounded-2xl p-6 bg-white/[0.02] hover:border-white/15 transition-colors group"
+                      style={{ borderLeftColor: `${stage.color}40`, borderLeftWidth: "2px" }}>
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className="font-oswald text-sm font-medium px-3 py-1 rounded-full text-xs uppercase tracking-wider"
+                          style={{ backgroundColor: `${stage.color}15`, color: stage.color }}>
+                          {stage.period}
+                        </span>
+                      </div>
+                      <h4 className="font-oswald text-xl font-semibold mb-3 group-hover:text-white transition-colors" style={{ color: stage.color }}>{stage.title}</h4>
+                      <ul className="flex flex-col gap-1.5">
+                        {stage.items.map(item => (
+                          <li key={item} className="flex items-start gap-2 text-white/50 text-sm">
+                            <span className="mt-1.5 w-1 h-1 rounded-full shrink-0" style={{ backgroundColor: stage.color }} />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Budget footer */}
+            <div className={`mt-14 border border-white/[0.08] rounded-2xl p-7 bg-white/[0.02] transition-all duration-700 delay-700 ${stagesSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
+              <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
+                <div>
+                  <div className="text-white/40 text-xs uppercase tracking-widest mb-1">Общий бюджет проекта</div>
+                  <div className="font-oswald text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#FF2EAD] to-[#FF6B2E]">220 млн ₽</div>
+                  <div className="text-white/40 text-sm mt-1">22 млн ₽ / год · 10 лет</div>
+                </div>
+                <div className="h-px md:h-16 w-full md:w-px bg-white/10" />
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
+                  {[
+                    { label: "Госгранты", icon: "Landmark" },
+                    { label: "Частные фонды", icon: "Heart" },
+                    { label: "Корпоративные партнёры", icon: "Building2" },
+                    { label: "Краудфандинг", icon: "Users" },
+                  ].map(s => (
+                    <div key={s.label} className="flex flex-col items-center gap-2">
+                      <div className="w-10 h-10 rounded-lg bg-white/[0.06] flex items-center justify-center">
+                        <Icon name={s.icon} size={18} className="text-white/50" />
+                      </div>
+                      <div className="text-white/40 text-xs leading-tight">{s.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
