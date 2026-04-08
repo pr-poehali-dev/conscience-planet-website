@@ -78,8 +78,8 @@ const Index = () => {
               className="w-10 h-10 rounded-full object-cover ring-2 ring-[#00D4FF]/40"
             />
             <span className="font-oswald text-xl font-bold tracking-widest">
-              <span className="text-[#00D4FF]">ПРО</span>
-              <span className="text-white">ЕКТ</span>
+              <span className="text-[#00D4FF]">СОВЕСТЬ</span>
+              <span className="text-white"> ПЛАНЕТЫ</span>
             </span>
           </a>
 
@@ -460,7 +460,7 @@ const Index = () => {
       <footer className="border-t border-white/[0.08] py-10 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-oswald text-xl font-bold tracking-widest">
-            <span className="text-[#00D4FF]">ПРО</span><span className="text-white/60">ЕКТ</span>
+            <span className="text-[#00D4FF]">СОВЕСТЬ</span><span className="text-white/60"> ПЛАНЕТЫ</span>
           </div>
           <div className="text-white/30 text-sm">© 2026 Все права защищены</div>
           <div className="flex gap-6">
