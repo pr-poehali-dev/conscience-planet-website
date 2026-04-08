@@ -410,7 +410,8 @@ const Index = () => {
                 {
                   period: "0–6 мес.",
                   title: "Подготовительный этап",
-                  items: ["Перевод проекта из статуса общественной инициативы в пилотный эксперимент на базе Академии наук РФ", "Формирование научного комитета", "Разработка технического задания", "Получение разрешений этических комитетов", "Создание прототипа ПО и закупка оборудования"],
+                  keyItem: "Перевод проекта из статуса общественной инициативы в пилотный эксперимент на базе Академии наук РФ",
+                  items: ["Формирование научного комитета", "Разработка технического задания", "Получение разрешений этических комитетов", "Создание прототипа ПО и закупка оборудования"],
                   color: "#FF2EAD",
                   index: 1,
                 },
@@ -473,6 +474,14 @@ const Index = () => {
                         </span>
                       </div>
                       <h4 className="font-oswald text-xl font-semibold mb-3 group-hover:text-white transition-colors" style={{ color: stage.color }}>{stage.title}</h4>
+                      {'keyItem' in stage && stage.keyItem && (
+                        <div className="flex items-start gap-3 mb-4 p-3.5 rounded-xl border" style={{ borderColor: `${stage.color}40`, backgroundColor: `${stage.color}10` }}>
+                          <div className="shrink-0 mt-0.5 w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: `${stage.color}25` }}>
+                            <Icon name="Star" size={13} style={{ color: stage.color }} />
+                          </div>
+                          <span className="text-sm font-medium leading-snug" style={{ color: stage.color }}>{stage.keyItem}</span>
+                        </div>
+                      )}
                       <ul className="flex flex-col gap-1.5">
                         {stage.items.map(item => (
                           <li key={item} className="flex items-start gap-2 text-white/50 text-sm">
