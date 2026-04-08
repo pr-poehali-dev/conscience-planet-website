@@ -15,12 +15,12 @@ const NAV_LINKS = [
 const DONATE_AMOUNTS = [500, 1000, 2500, 5000];
 
 const ACTIVITIES = [
-  { icon: "Users", title: "Сообщество", desc: "Объединяем людей вокруг общих ценностей и целей. Создаём пространство для диалога и взаимопомощи." },
-  { icon: "BookOpen", title: "Образование", desc: "Проводим мастер-классы, вебинары и обучающие программы для всех желающих." },
-  { icon: "Globe", title: "Социальные проекты", desc: "Реализуем инициативы, меняющие жизнь людей к лучшему в реальном мире." },
-  { icon: "Heart", title: "Поддержка", desc: "Оказываем помощь тем, кто в ней нуждается — быстро, адресно, с душой." },
-  { icon: "Zap", title: "Инновации", desc: "Внедряем современные решения для повышения эффективности социальных инициатив." },
-  { icon: "Star", title: "Партнёрства", desc: "Выстраиваем долгосрочные связи с организациями-единомышленниками по всей стране." },
+  { icon: "Microscope", title: "Научная сфера", desc: "Фундаментальные исследования в дерматоглифике, антропологии и нейробиологии." },
+  { icon: "BarChart2", title: "Статистика и ИИ", desc: "Обработка больших массивов биометрических данных с применением машинного обучения." },
+  { icon: "Database", title: "IT-инфраструктура", desc: "Создание цифровой платформы для сбора, хранения и анализа дерматоглифических данных." },
+  { icon: "BookOpen", title: "Гуманитарная сфера", desc: "Осмысление этических аспектов и разработка гуманистических концепций." },
+  { icon: "GraduationCap", title: "Просвещение", desc: "Популяризация научного подхода и разработка образовательных программ." },
+  { icon: "Globe", title: "Международное партнёрство", desc: "Сотрудничество с ВОЗ, ЮНЕСКО, РАН и международными центрами дерматоглифики." },
 ];
 
 function useInView(threshold = 0.15) {
@@ -135,18 +135,18 @@ const Index = () => {
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
           <div className="inline-flex items-center gap-2 border border-[#00D4FF]/30 bg-[#00D4FF]/10 text-[#00D4FF] text-xs font-medium uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-8 animate-fade-in">
             <span className="w-1.5 h-1.5 bg-[#00D4FF] rounded-full animate-pulse" />
-            Мы меняем мир к лучшему
+            Междисциплинарный научный проект
           </div>
 
           <h1 className="font-oswald text-6xl md:text-8xl lg:text-[100px] font-bold leading-[0.9] tracking-tight mb-6 animate-fade-in" style={{ animationDelay: "0.2s", opacity: 0 }}>
-            ВМЕСТЕ <br />
+            СОВЕСТЬ <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] via-[#FF2EAD] to-[#AAFF00]">
-              МЫ СИЛА
+              ПЛАНЕТЫ
             </span>
           </h1>
 
           <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10 animate-fade-in" style={{ animationDelay: "0.4s", opacity: 0 }}>
-            Социальный проект, объединяющий людей ради добрых дел. Каждое ваше действие — шаг к лучшему миру.
+            Изучаем феномен преемственности индивидуальности через дерматоглифику. Наука на службе гуманизации общества и глобального здоровья.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style={{ animationDelay: "0.6s", opacity: 0 }}>
@@ -163,7 +163,7 @@ const Index = () => {
           </div>
 
           <div className="mt-20 grid grid-cols-3 gap-8 max-w-md mx-auto animate-fade-in" style={{ animationDelay: "0.8s", opacity: 0 }}>
-            {[["1 200+", "Участников"], ["47", "Проектов"], ["5 лет", "В деле"]].map(([num, label]) => (
+            {[["10 000+", "Участников"], ["10 лет", "Программа"], ["220 млн ₽", "Бюджет"]].map(([num, label]) => (
               <div key={label} className="text-center">
                 <div className="font-oswald text-2xl md:text-3xl font-bold text-[#00D4FF]">{num}</div>
                 <div className="text-white/40 text-xs uppercase tracking-widest mt-1">{label}</div>
@@ -188,14 +188,14 @@ const Index = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] to-[#FF2EAD]">ТАКИЕ?</span>
             </h2>
             <p className="text-white/60 text-base leading-relaxed mb-6">
-              Мы — команда единомышленников, которая верит: небольшие добрые дела способны изменить мир. Наш проект объединяет волонтёров, специалистов и неравнодушных людей для реализации социальных инициатив.
+              «Совесть Планеты» — междисциплинарный научный проект, нацеленный на укрепление глобального здоровья и гармонизацию общества через изучение феномена преемственности индивидуальности.
             </p>
             <p className="text-white/60 text-base leading-relaxed mb-8">
-              С 2019 года мы реализовали десятки программ помощи, образовательных проектов и общественных инициатив по всей стране.
+              Мы объединяем дерматоглифику, генетику, психологию, нейробиологию, статистику и IT, чтобы исследовать гипотезу о возможной связи отпечатков пальцев и стоп с феноменом реинкарнации — и перевести дискуссию из сферы веры в область эмпирического анализа.
             </p>
             <div className="flex items-center gap-4">
               <div className="h-px flex-1 bg-gradient-to-r from-[#00D4FF]/40 to-transparent" />
-              <div className="font-oswald text-sm text-white/30 uppercase tracking-widest">С 2019 года</div>
+              <div className="font-oswald text-sm text-white/30 uppercase tracking-widest">Наука. Данные. Гуманизм.</div>
             </div>
           </div>
 
@@ -204,10 +204,10 @@ const Index = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-[#00D4FF] via-[#FF2EAD] to-[#AAFF00] rounded-2xl opacity-20 blur-sm" />
               <div className="relative grid grid-cols-2 gap-4">
                 {[
-                  { label: "Регионов охвата", value: "23", color: "#00D4FF" },
-                  { label: "Волонтёров", value: "450+", color: "#FF2EAD" },
-                  { label: "Выдано грантов", value: "₽8.4М", color: "#AAFF00" },
-                  { label: "Довольных людей", value: "10К+", color: "#FF6B2E" },
+                  { label: "Участников в базе", value: "10 000+", color: "#00D4FF" },
+                  { label: "Научных статей", value: "15+", color: "#FF2EAD" },
+                  { label: "Лет программы", value: "10", color: "#AAFF00" },
+                  { label: "Сфер науки", value: "6", color: "#FF6B2E" },
                 ].map(item => (
                   <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-colors">
                     <div className="font-oswald text-3xl font-bold mb-1" style={{ color: item.color }}>{item.value}</div>
@@ -238,14 +238,14 @@ const Index = () => {
               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF2EAD]/60 to-transparent" />
 
               <blockquote className="font-oswald text-3xl md:text-4xl font-medium leading-tight text-center mb-10 text-white/90">
-                "Создать устойчивое сообщество добра, где каждый человек — независимо от возраста и положения — может найти поддержку и стать частью перемен."
+                "Создать научную основу для гуманизации общества и предотвращения деструктивных сценариев развития цивилизации."
               </blockquote>
 
               <div className="grid md:grid-cols-3 gap-6">
                 {[
-                  { icon: "Target", title: "Адресность", desc: "Каждая наша программа направлена на конкретных людей с реальными потребностями" },
-                  { icon: "Scale", title: "Прозрачность", desc: "Открытая отчётность и полный контроль за расходованием пожертвований" },
-                  { icon: "TrendingUp", title: "Результат", desc: "Измеримый социальный эффект от каждого проекта и инициативы" },
+                  { icon: "Target", title: "Адресность", desc: "Экспериментальная проверка гипотезы о преемственности индивидуальности через дерматоглифику" },
+                  { icon: "Scale", title: "Прозрачность", desc: "Открытая методология, публикации в рецензируемых журналах и независимая верификация" },
+                  { icon: "TrendingUp", title: "Результат", desc: "Перевод дискуссии о реинкарнации из сферы веры в область эмпирического анализа" },
                 ].map(item => (
                   <div key={item.title} className="flex flex-col items-center text-center p-5 rounded-2xl bg-white/5 border border-white/[0.08] hover:border-[#FF2EAD]/30 transition-colors">
                     <div className="w-12 h-12 rounded-full bg-[#FF2EAD]/15 flex items-center justify-center mb-4">
@@ -368,9 +368,9 @@ const Index = () => {
 
           <div className={`mt-10 grid md:grid-cols-3 gap-4 transition-all duration-700 delay-300 ${donateSection.inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             {[
-              { icon: "Users", title: "Волонтёрство", desc: "Помогай делом, а не только деньгами" },
-              { icon: "Share2", title: "Рассказать друзьям", desc: "Поделись нашей историей в соцсетях" },
-              { icon: "Handshake", title: "Партнёрство", desc: "Для бизнеса и организаций" },
+              { icon: "FlaskConical", title: "Стать участником", desc: "Учёные, IT-специалисты и аналитики данных" },
+              { icon: "Share2", title: "Рассказать о нас", desc: "Распространи информацию о проекте" },
+              { icon: "Handshake", title: "Партнёрство", desc: "Для фондов, компаний и организаций" },
             ].map(item => (
               <div key={item.title} className="flex gap-4 p-5 rounded-2xl border border-white/[0.08] bg-white/[0.03] hover:border-white/15 transition-colors cursor-pointer">
                 <div className="w-10 h-10 rounded-lg bg-white/[0.08] flex items-center justify-center shrink-0">
