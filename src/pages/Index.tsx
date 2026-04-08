@@ -71,9 +71,16 @@ const Index = () => {
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#09090f]/95 backdrop-blur-md border-b border-white/5 py-3" : "bg-transparent py-5"}`}>
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <a href="#hero" onClick={(e) => { e.preventDefault(); scrollTo("#hero"); }}
-            className="font-oswald text-2xl font-bold tracking-widest">
-            <span className="text-[#00D4FF]">ПРО</span>
-            <span className="text-white">ЕКТ</span>
+            className="flex items-center gap-3">
+            <img
+              src="https://cdn.poehali.dev/projects/7e72ef13-d58a-4508-aea6-693c8b706395/bucket/eb5383e6-f9ca-4fe8-b468-187333af7244.jpg"
+              alt="Логотип"
+              className="w-10 h-10 rounded-full object-cover ring-2 ring-[#00D4FF]/40"
+            />
+            <span className="font-oswald text-xl font-bold tracking-widest">
+              <span className="text-[#00D4FF]">ПРО</span>
+              <span className="text-white">ЕКТ</span>
+            </span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
